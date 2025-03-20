@@ -14,11 +14,7 @@ export default function Details() {
 
   useEffect(() => {
     apiClient
-      .get(`/office/${slug}`, {
-        headers: {
-          "X-API-KEY": "a2kdyjx1r6gdimze",
-        },
-      })
+      .get(`/office/${slug}`)
       .then((response) => {
         setOffice(response.data.data), setLoading(false);
       })
